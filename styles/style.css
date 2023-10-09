@@ -9,12 +9,14 @@
 }
 .divisao{
     height: 10px;
-    width: 100%;
+    min-width: 100%;
     background: #2b4041;
     margin-top: 40px ;
     box-shadow: black 5px 2px 1px;
+    
 }
 body{
+    width: 100%;
     background: rgb(227,255,244);
 background: radial-gradient(circle, rgba(227,255,244,1) 0%, rgba(237,251,251,1) 100%);
 }
@@ -27,7 +29,6 @@ background: radial-gradient(circle, rgba(227,255,244,1) 0%, rgba(237,251,251,1) 
     width: 100%;
     background-color: #f5fffb;
     box-shadow: #2b4041 .2px .2px 0px;
-    
 
 }
 
@@ -142,7 +143,6 @@ main {
 /*segunda sessão*/
 #sobre {
     font-size: 1.3rem;
-    margin-top: 20px;
     width: 100%;
     height: 100vh;
     flex: 1; 
@@ -184,7 +184,7 @@ main {
     align-items: center;
     gap: 10rem;
     width: 90%;
-    height: 100vh;
+    min-height: 100vh;
     color: #508283;
     
 }
@@ -201,7 +201,7 @@ main {
 .container-habilidades h1{
     font-size: 2rem;
     border-bottom: #2b4041 solid 3px;
-    margin-bottom: 30px;
+    margin-bottom: 5%;
 }
 
 .coluna-front-end,
@@ -227,6 +227,7 @@ main {
 
 .habilidade {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 50%;
     margin-bottom: 10px;
@@ -325,148 +326,30 @@ footer img{
 }
 ::selection {
     background-color: #508283;
-    color: #f5fffb; /* Define a cor do texto selecionado, pode ser branca para contraste */
+    color: #f5fffb; 
   }
-@media (max-width: 800px) {
-    nav ul {
-        gap: 3rem; 
-    }
 
-    .container-imagem img {
-        height: 20rem; 
-    }
-    main{
-        width: 100%;
-    }
-    .navegação1{
-        display: block;
-       text-align: center;
-    }
-    
-    nav ul {
-        flex-direction: column; 
-        gap: .8rem; 
-    }
-
-    #perfil{
-        width: 150%;
-        margin-left: 300px;
-        margin-top: 100px;
-        font-size: 1.8rem;
-    }
-    #perfil button{
-        font-size: 1.8rem;
-    }
-    #sobre p, #sobre h1{
-        margin-left: 400px;
-        text-align: center;
-        width: 140%;
-    }
-    .divisao{
-        width: 200%;
-    }
-    /* seção sobre*/
-    .container-tecnologias img {
-        width: 50%;
-    }
-    .container-tecnologias{
-        margin-left: 400px;
-    }
-    /*habilidades*/
-    #habilidades{
-      width: 150%;
-      height: 180vh; 
-    }
-    .title-habilidades{
-        margin-top: 200px;
-        margin-left: 400px;
-    }
-   .coluna-front-end, .coluna-back-end{
-        margin-left: 400px;
-        width: 90%;
-        height: 20rem;
-   }
-   .container-habilidades{
-    flex-direction: column;
-    margin-bottom: 200px;
-   }
-   #projetos{
-    width: 150%;
-   }
-   .container-projetos{
-    margin-left: 400px;
-
-   }
-   .container-titulo-projetos{
-    margin-left: 400px;
-   }
-   .linha{
-    font-size: 1.3rem;
-    
-   }
-   footer{
-    width: 150%;
-   }
-   footer h1{
-    font-size: 1.7rem;
-   }
+  .android-icon {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 24px;
+    color: #508283;
 }
 
-@media (max-width: 480px) {
-    main{
-        width: 150%;
-    }
-    .navegação1{
-        display: block;
-       text-align: center;
-    }
-    
-    nav ul {
-        flex-direction: column; 
-        gap: .8rem; 
-    }
-
-    #perfil{
-        margin-top: 100px;
-        margin-right: 35px;
-    }
-    #perfil button{
-        font-size: 1.1rem;
-    }
-    .container-imagem img{
-        height: 19rem;
-    }
-    #sobre p, #sobre h1{
-        width: 80%;
-    }
-    /* seção sobre*/
-    .container-tecnologias img {
-        width: 19%;
-    }
-    #habilidades{
-      width: 100%;
-      height: 180vh; 
-    }
-   .coluna-front-end, .coluna-back-end{
-    margin-right: 40px;
-        width: 90%;
-        height: 20rem;
-   }
-   .container-habilidades{
-    flex-direction: column;
-    margin-bottom: 200px;
-   }
-   .linha{
-    font-size: 1.3rem;
-    
-   }
-   footer{
-    width: 150%;
-   }
-   footer h1{
-    font-size: 1.7rem;
-   }
+/* Estilos para o menu de navegação responsivo */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
+.menu-icon.active {
+    transform: rotate(90deg);
+  }
+
+
+
+  
+
 
 
 
