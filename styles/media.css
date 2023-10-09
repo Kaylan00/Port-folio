@@ -10,8 +10,13 @@
     }
 }
 @media (max-width: 800px) {
+    
     .menu-icon {
         display: block;
+    }
+    /*perfil*/
+    .container-imagem img{
+        height: 22rem;
     }
 
     .navegação1 ul {
