@@ -4,337 +4,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="./assets/lua.pnggit push">
-    <link rel="stylesheet" href="styles/media.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-+d/zA8PQ4u7lVT86Ck2qzN3m2w5M5KtEmUWg5tQ5tkg2hDFwwDK25Xd5t7E+ZMYSaB4pbc5PsrKoB/Sa68u4rZQ==" crossorigin="anonymous" />
+    <title>Kaylan Souza Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/mediaquery.css">
 </head>
 
 <body>
     <header>
-        <nav class="navegação1 js-menu">
-            <a href="#perfil" id="logo">KaylanSouza</a>
-            <div id="menu-bars" class="menu-icon">&#9776;</div>
-            <ul>
-                <li> <a href="#sobre">Sobre</a> </li>
-                <li> <a href="#habilidades">Habilidades</a> </li>
-                <li> <a href="#projetos">Projetos</a> </li>
-                <li><a href="#contato"> Contato</a></li>
+        <nav class="navbar">
+            <span id="menu-bars" class="menu-icon">&#9776;</span>
+            <ul class="nav-links">
+                <h1 id="title-android">Bem-vindo ao meu portfolio 😎</h1>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div>
+                <button id="languageToggle">PT/EN</button>
+                <button id="themeToggle">Dark/Light</button>
+            </div>
         </nav>
     </header>
+
     <main>
-        <section id="perfil">
-            <div class="container-imagem">
-                <img src="assets/Foto_Para_curriculos-removebg-preview.png" alt="">
-            </div>
-            <div>
-                <div class="container-sessao">
-                    <p>Olá, Eu sou</p>
-                    <h2>Kaylan Argollo de Souza</h2>
-                    <h3>Desenvolvedor FullStack</h3>
-                </div>
-                <div class="container-botao">
-                   <a href="curri_cert 2.pdf" target="_blank"><button class="botao1">Curriculo</button></a> 
-                    <a href="https://wa.me/5528999087714?text=Ol%C3%A1+Kaylan+vi+seu+portif%C3%B3lio%21" target="_blank"><button
-                            class="botao2">WhatsApp</button></a>
-                </div>
-                <div class="container-social">
-                    <a href="https://github.com/Kaylan00" target="_blank"><img src="assets/bxl-github.svg" alt=""></a>
-                    <a href="https://www.linkedin.com/in/kaylan-argollo-souza-9262b8230/" target="_blank"><img
-                            src="assets/bxl-linkedin-square.svg" alt=""></a>
-                </div>
-            </div>
-        </section>
-        <div class="divisao"></div>
-        <section id="sobre">
-            
-            <div class="acerto-section-sobre">
-                <h1>Sobre mim</h1>
-                <p>Atualmente, estou em busca de meu primeiro emprego na área, ansioso para aplicar meus conhecimentos e
-                    habilidades em projetos desafiadores.
-                    Minha jornada como desenvolvedor começou com HTML, CSS e JavaScript, e desde então, venho me
-                    aprimorando e expandindo meus conhecimentos nesse universo do desenvolvimento web.
-                    Através de estudos autodidatas e projetos pessoais, adquiri um sólido entendimento dos fundamentos
-                    dessas linguagens e estou confiante em utilizá-las para criar interfaces atraentes e funcionais.
-                    Embora ainda não tenha experiência profissional, sou um profissional determinado e focado em
-                    aprender e crescer constantemente. Acredito que a curiosidade e a sede de conhecimento são
-                    essenciais em nossa área, e estou sempre em busca de novas tecnologias e tendências para me manter
-                    atualizado.
-                    Além do conhecimento técnico, valorizo a colaboração e o trabalho em equipe. Tenho facilidade em me
-                    comunicar com colegas de trabalho e estou aberto a receber feedback construtivo para me aprimorar
-                    constantemente. Sou um entusiasta de projetos que possibilitam o compartilhamento de ideias, o que
-                    acredito que resulta em soluções mais inovadoras e criativas.
-                    Estou animado para embarcar nessa jornada como desenvolvedor Full Stack e contribuir para a
-                    construção de aplicações incríveis. Sei que ainda tenho muito a aprender, mas estou determinado a
-                    enfrentar desafios e crescer profissionalmente a cada passo do caminho.</p>
-                <div class="container-tecnologias">
-                    <img src="assets/html-5.png" alt="">
-                    <img src="assets/css.png" alt="">
-                    <img src="assets/pngwing.com (1).png" alt="">
-                    <img src="assets/nodejs.png" alt="">
-                    <img src="assets/mongodb.png" alt="">
-                </div>
-            </div>
-        </section>
-        <div class="divisao"></div>
-        <section id="habilidades">
-            <h1 class="title-habilidades">Habilidades</h1>
-            <div class="container-habilidades">
-                <div class="coluna-front-end">
-                    <h1>Front end</h1>
-                    <div class="linha">
-                        <div class="habilidade">
-                            <img src="assets/bxl-html5.svg" alt="">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Avançado</p>
-                            </div>
+        <section id="sobre" class="js-section">
+            <div class="container-profile ">
+                <div class="banner">
+                    <div class="intro">
+                        <div class="title">
+                            <h2>Olá, eu sou o</h2>
+                            <span>Kaylan Souza 😺</span>
+                            <p>Desenvolvedor Full-Stack</p>
                         </div>
-
-                        <div class="habilidade">
-                            <img src="assets/bxl-css3.svg" alt="">
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Intermediário</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/bxl-javascript.svg" alt="">
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Itermediário</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/bxl-bootstrap.svg" alt="">
-                            <div>
-                                <h3>Bootstrap</h3>
-                                <p>Intermediário</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/bxl-react.svg" alt="">
-                            <div>
-                                <h3>React</h3>
-                                <p>Básico</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/bxl-wordpress.svg" alt="">
-                            <div>
-                                <h3>Wordpress</h3>
-                                <p>Básico</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/photo-album-regular-24.png" alt="">
-                            <div>
-                                <h3>Photoshop</h3>
-                                <p>Básico</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/angular-logo-24.png" alt="">
-                            <div>
-                                <h3>Angular</h3>
-                                <p>Básico</p>
-                            </div>
+                        <div class="actions">
+                            <a href="caminho/para/seu/curriculo.pdf" download>Download CV</a>
+                            <a href="mailto:kaylanargollo16@gmail.com" target="_blank">Entrar em contato</a>
                         </div>
                     </div>
-                </div>
-                <div class="coluna-back-end">
-                    <h1>Back end</h1>
-                    <div class="linha">
-                        <div class="habilidade">
-                            <img src="assets/bxl-mongodb.svg" alt="">
-                            <div>
-                                <h3>Mongodb</h3>
-                                <p>Básico</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/bxl-nodejs.svg" alt="">
-                            <div>
-                                <h3>Node.js</h3>
-                                <p>Intermediário</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/bxl-php.svg" alt="">
-                            <div>
-                                <h3>PHP</h3>
-                                <p>Básico</p>
-                            </div>
-                        </div>
-                        <div class="habilidade">
-                            <img src="assets/java-logo-24.png" alt="">
-                            <div>
-                                <h3>Java</h3>
-                                <p>Básico</p>
-                            </div>
-                        </div>
-
+                    <div class="profile">
+                        <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
                     </div>
                 </div>
             </div>
         </section>
-        <div class="divisao"></div>
-        <section id="projetos" class="js-scroll">
-            <div class="container-titulo-projetos">
-                <h1>Projetos</h1>
-                <p>Alguns dos projetos que mostram meu conhecimento <br>em algumas tecnologias:</p>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h1>About Me</h1>
+                <p id="paragraph-about">Olá! Eu sou Kaylan Souza. Comecei minha jornada estudando HTML, CSS e
+                    JavaScript, e aos poucos fui explorando outras tecnologias de acordo com as demandas do mercado e
+                    com as quais me identificava. Tenho experiência em atendimento ao cliente, otimização de processos
+                    de trabalho e adaptação a diferentes tecnologias.</p>
             </div>
-            <div class="container-projetos">
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/forest.png" alt="">
-                        <div class="texto-projetos">
-                            <h2>BrazilForest</h2>
-                            <p>Um site simples de uma empresa ficticia que tem a intenção de mostrar as maravilhas do Brasil.</p>
-                        </div>
-                        <div class="container-botao-projetos">
-                            <a href="https://github.com/Kaylan00/TelaBrazilForest" target="_blank"></a><button>GitHub</button>
-                           <a href="https://kaylan00.github.io/TelaBrazilForest/" target="_blank"> <button>Ver Projeto</button></a>
-                        </div>
-                        <div class="imagens-tecnologias">
-                            <img src="assets/css.png" alt="">
-                            <img src="assets/html-5.png" alt="">
-                            <img src="assets/pngwing.com (1).png" alt="">
-                        </div>
-                    </article>
+        </section>
+        <section id="skills" class="section">
+            <div class="cards">
+                <div class="box">
+                    <p>HTML5</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
                 </div>
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/calculadora.png" alt="">
-                        <div class="texto-projetos">
-                            <h2>CalculadoraJs</h2>
-                            <p>Uma calculadora que pode mudar o tema, copiar o resultado e mostra caso tenha algum erro no calculo. </p>
-                        </div>
-                        <div class="container-botao-projetos">
-                           <a href="https://github.com/Kaylan00/CalculadoraJS" target="_blank"><button>GitHub</button></a> 
-                            <a href="https://kaylan00.github.io/CalculadoraJS/ "target="_blank"> <button>Ver Projeto</button> </a>  
-                        </div>
-                        <div class="imagens-tecnologias">
-                            <img src="assets/css.png" alt="">
-                            <img src="assets/html-5.png" alt="">
-                            <img src="assets/pngwing.com (1).png" alt="">
-                        </div>
-                        </article>
+
+                <div class="box">
+                    <p>CSS3</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
                 </div>
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/Captura de tela 2023-08-03 190519.png" alt="">
+
+                <div class="box">
+                    <p>JavaScript</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>TypeScript</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>React.js</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Next.js</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>CSS-in-JS</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Material UI</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Tailwind CSS</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>GraphQL</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Apollo</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Redux</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>React Query</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>React Testing</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Strapi</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Storybook</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>SASS</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+
+                <div class="box">
+                    <p>Figma</p>
+                    <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <div class="container">
+                <h1>Principais Projetos</h1>
+                <div class="filter-menu">
+                    <label for="technology">Filtrar por Tecnologia:</label>
+                    <select id="technology">
+                        <option value="all">Todas as Tecnologias</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="angular">Angular</option>
+                    </select>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-technologies="html, css">
+                        <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                        <h2>Project Name</h2>
                         <div>
-                            <h2>Jogo da Velha</h2>
-                            <p>Um site com jogo da velha aonde coloca os nomes dos jogadores e quem vencer aparece escrito o nome de quem venceu.</p>
+                            <a href="#" class="project-link">View Project</a>
+                            <a href="#" class="project-link">GitHub</a>
                         </div>
-                        <div class="container-botao-projetos">
-                            <a href="https://github.com/Kaylan00/Jogo-da-velha" target="_blank"><button>GitHub</button></a>
-                            <a href="https://kaylan00.github.io/Jogo-da-velha/" target="_blank"> <button>Ver Projeto</button> </a> 
+                    </div>
+                    <div class="modal" id="modal-project-1">
+                        <span class="modal-close">&times;</span>
+                        <h2>Projeto HTML e CSS</h2>
+                        <p>Descrição do Projeto HTML e CSS.</p>
+                        <video controls>
+                            <source src="caminho/do/seu/video1.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                    </div>
+
+                    <div class="project-card" data-technologies="javascript">
+                        <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                        <h2>Project Name</h2>
+                        <div>
+                            <a href="#" class="project-link">View Project</a>
+                            <a href="#" class="project-link">GitHub</a>
                         </div>
-                        <div class="imagens-tecnologias">
-                            <img src="assets/css.png" alt="">
-                            <img src="assets/html-5.png" alt="">
-                            <img src="assets/pngwing.com (1).png" alt="">
+                    </div>
+                    <div class="modal" id="modal-project-2">
+                        <span class="modal-close">&times;</span>
+                        <h2>Projeto JavaScript</h2>
+                        <p>Descrição do Projeto JavaScript.</p>
+                        <video controls>
+                            <source src="caminho/do/seu/video2.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                    </div>
+
+                    <div class="project-card" data-technologies="angular">
+                        <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                        <h2>Project Name</h2>
+                        <div>
+                            <a href="#" class="project-link">View Project</a>
+                            <a href="#" class="project-link">GitHub</a>
                         </div>
-                        </article>
+                    </div>
+                    <div class="modal" id="modal-project-3">
+                        <span class="modal-close">&times;</span>
+                        <h2>Projeto Angular</h2>
+                        <p>Descrição do Projeto Angular.</p>
+                        <video controls>
+                            <source src="caminho/do/seu/video3.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                    </div>
+
+                    <div class="project-card" data-technologies="javascript, css">
+                        <img src="https://cdn.pixabay.com/photo/2023/11/22/18/29/white-cheeked-turaco-8406175_1280.jpg" alt="Project 1">
+                        <h2>Project Name</h2>
+                        <div>
+                            <a href="#" class="project-link">View Project</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-project-4">
+                        <span class="modal-close">&times;</span>
+                        <h2>Projeto JavaScript e CSS</h2>
+                        <p>Descrição do Projeto JavaScript e CSS.</p>
+                        <video controls>
+                            <source src="caminho/do/seu/video4.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                    </div>
                 </div>
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/netflix.png" alt="">
-                        <div class="texto-projetos">
-                            <h2>Tela Netflix</h2>
-                            <p>Uma tela da netflix simples feita com html e css puro, com objetivo de mostrar os conhecimentos em html e css e um pouco de javascript.</p>
-                        </div>
-                        <div class="container-botao-projetos">
-                            <a href="" target="_blank"></a><button>GitHub</button>
-                            <a href="" target="_blank"> <button>Ver Projeto</button> </a>  
-                         </div>
-                         <div class="imagens-tecnologias">
-                            <img src="assets/css.png" alt="">
-                            <img src="assets/html-5.png" alt="">
-                            <img src="assets/pngwing.com (1).png" alt="">
-                        </div>
-                        </article>
-                </div>
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/Captura de tela 2023-08-03 191305.png" alt="">
-                        <div class="texto-projetos">
-                            <h2>Tela de login</h2>
-                            <p>Uma tela de login onde o usúario pode se cadastrar ou fazer login no site.</p>
-                        </div>
-                        <div class="container-botao-projetos">
-                           <a href="https://github.com/Kaylan00/tela-login" target="_blank"><button>GitHub</button></a> 
-                           <a href="https://kaylan00.github.io/tela-login/"target="_blank"> <button>Ver Projeto</button> </a> 
-                        </div>
-                        <div class="imagens-tecnologias">
-                            <img src="assets/css.png" alt="">
-                            <img src="assets/html-5.png" alt="">
-                            <img src="assets/pngwing.com (1).png" alt="">
-                        </div>
-                    </article>
-                </div>
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/Captura de tela 2023-10-04 171212.png" alt="">
-                        <div class="texto-projetos">
-                            <h2>Rede social See you</h2>
-                            <p>Rede social feito com <strong>Angular</strong> e com uma API desenolvida por mim com <strong>AdonisJS </strong>com estilizações simples , podendo postar, comentar, editar e excluir publicações.</p>
-                        </div>
-                        <div class="container-botao-projetos">
-                            <a href="https://github.com/Kaylan00/ProjetoRedeSocial_angular" target="_blank"><button>GitHub</button></a> 
-                            <a href="https://www.linkedin.com/posts/kaylan-argollo-souza-9262b8230_projeto-rede-social-com-estiliza%C3%A7%C3%B5es-simples-activity-7114775382364422144-lwvw?utm_source=share&utm_medium=member_desktop"target="_blank"> <button>Ver Projeto</button> </a> 
-                         </div>
-                         <div class="imagens-tecnologias">
-                            <img src="assets/Angular_full_color_logo.svg.png" alt="angular">
-                            <img src="assets/adonis-seeklogo.com.svg" alt="">
-                        </div>
-                        </article>
-                </div>
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/em_breve.png" alt="Em breve">
-                        <div class="texto-projetos">
-                            <h2>Cardápio online</h2>
-                            <p>Em andamento, possiveis tecnologias utilizadas:</p>
-                        </div>
-                        <div class="imagens-tecnologias">
-                            <img src="assets/React-icon.svg.png" alt="react">
-                            <img src="assets/express.png" alt="express">
-                        </div>
-                    </article>
-                </div>
-                <div class="container-projeto">
-                    <article>
-                        <img src="assets/em_breve.png" alt="Em breve">
-                        <div class="texto-projetos">
-                            <h2>Site eccomerce com Wordpress</h2>
-                            <p>Em andamento, possiveis tecnologias utilizadas:</p>
-                            <div class="imagens-tecnologias">
-                                <img src="assets/WordPress_blue_logo.png" alt="Wordpress">
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
             </div>
         </section>
-<div class="divisao"></div>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h1>Contact</h1>
+                <div class="contact-links">
+                    <div class="icon">
+                        <a href="mailto:kaylanargollo16@gmail.com" target="_blank">
+                            <div class="box-contact">
+                                <img src="img/icone-email.svg" alt="e-mail">
+                            </div>
+                        </a>
+                        <a href="mailto:kaylanargollo16@gmail.com" target="_blank">
+                            <p> <strong>E-mail</strong></p>
+                        </a>
+                        <a href="mailto:kaylanargollo16@gmail.com" target="_blank">
+                            <p id="email-conta">Email@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="tel:+5528999087714" target="_blank">
+                            <div class="box-contact">
+                                <img src="img/icone-email.svg" alt="telefone">
+                            </div>
+                        </a>
+                        <a href="tel:+5528999087714" target="_blank">
+                            <p> <strong>Telefone</strong></p>
+                        </a>
+                        <a href="tel:+5528999087714" target="_blank">
+                            <p>+55 28 99908 7714</p>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.linkedin.com/in/seu-perfil-linkedin" target="_blank">
+                            <div class="box-contact">
+                                <img src="img/icone-email.svg" alt="linkedin">
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/seu-perfil-linkedin" target="_blank">
+                            <p> <strong>LinkedIn</strong></p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/seu-perfil-linkedin" target="_blank">
+                            <p>Seu Perfil</p>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://github.com/seu-perfil-github" target="_blank">
+                            <div class="box-contact">
+                                <img src="img/icone-email.svg" alt="github">
+                            </div>
+                        </a>
+                        <a href="https://github.com/seu-perfil-github" target="_blank">
+                            <p><strong>Github</strong></p>
+                        </a>
+                        <a href="https://github.com/seu-perfil-github" target="_blank">
+                            <p>Seu Perfil</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
-    <footer id="contato">
-        <p>Kaylanargollo16@gmail.com</p>
-        <a href="https://wa.me/5528999087714?text=Ol%C3%A1+Kaylan+vi+seu+portif%C3%B3lio%21"><p>(28) 99908-7714</p></a>
-        <a href="https://www.linkedin.com/in/kaylan-argollo-souza-9262b8230/" target="_blank"> <img src="assets/bxl-linkedin-square.svg" alt=""></a>
-        <p id="diretrizes-margem">&copy; Kaylan Argollo de Souza. Todos os direitos reservados</p>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kaylan Souza - Portfolio</p>
+        </div>
     </footer>
-    <script src="index.js" defer></script>
+
+    <script src="./scripts/script.js" defer></script>
 </body>
 
 </html>
