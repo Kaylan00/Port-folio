@@ -16,6 +16,7 @@
             'EN': 'Contact',
             'PT': 'Contato'
         },
+
         'aboutText': {
             'EN': 'Hello! I\'m [Your Name], a passionate [Your Profession] with expertise in [Your Skills]. I have experience working on various projects and love turning ideas into reality.',
             'PT': 'Olá! Eu sou [Seu Nome], um apaixonado [Sua Profissão] com experiência em [Suas Habilidades]. Tenho experiência trabalhando em vários projetos e adoro transformar ideias em realidade.'
@@ -39,6 +40,16 @@
     }
 
     function updateContent(language) {
+        const themes = {
+            'EN': ['Dark', 'Light'],
+            'PT': ['Escuro', 'Claro']
+        };
+
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = themeToggle.textContent.split('/')[0].trim();
+        const newTheme = themes[language][0] === currentTheme ? themes[language][1] : themes[language][0];
+        themeToggle.textContent = `${newTheme}/${themes[language][1 - themes[language].indexOf(newTheme)]}`;
+
         const navLinks = document.querySelectorAll('.nav-links li a');
         navLinks.forEach((link, index) => {
             link.textContent = translations.navbar[language][index];
@@ -54,7 +65,7 @@
         contactInfo.forEach((info, index) => {
             info.textContent = translations.contactInfo[language][index];
         });
-        
+        // Aqui você pode adicionar mais elementos para atualizar o conteúdo conforme necessário
     }
 
     const languageToggle = document.getElementById('languageToggle');
@@ -64,8 +75,10 @@
 }
 
 language();*/
-
+alert(`Botão de trocar linguagem ainda está em desenvolvimento,
+O video do formulário complexo por enquanto não está funcionando!`)
 // Função para alternar entre temas claro e escuro
+
 function toggleTheme() {
     const body = document.body;
     body.classList.toggle('light-theme');
@@ -75,40 +88,6 @@ const themeToggle = document.getElementById('themeToggle');
 
 themeToggle.addEventListener('click', toggleTheme);
 
-
-function checkScroll() {
-    const sections = document.querySelectorAll('.section');
-  
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-  
-      if (sectionTop < windowHeight * 0.75) {
-        section.classList.add('active');
-      }
-    });
-  }
-  
-  function smoothScroll() {
-    checkScroll(); // Verifica ao carregar a página
-  
-    window.addEventListener('scroll', checkScroll); 
-const navLinks = document.querySelectorAll('.nav-links li a');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-
-        const targetId = e.target.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        const yOffset = -80; 
-        
-        const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-    });
-});
-}
-smoothScroll();
 
 
 function filterTechnolgy() {
@@ -135,47 +114,104 @@ function toggleMenu() {
     const menuBars = document.getElementById("menu-bars");
     const navigation = document.querySelector(".navbar ul");
     const menuIcon = document.querySelector(".menu-icon");
-    
+
     menuBars.addEventListener("click", () => {
-      navigation.classList.toggle("active");
-      menuIcon.classList.toggle("active"); 
-    
-      if (menuIcon.classList.contains("active")) {
-        menuIcon.innerHTML = "&#10005;"; 
-      } else {
-        menuIcon.innerHTML = "&#9776;"; 
-      }
+        navigation.classList.toggle("active");
+        menuIcon.classList.toggle("active");
+
+        if (menuIcon.classList.contains("active")) {
+            menuIcon.innerHTML = "&#10005;";
+        } else {
+            menuIcon.innerHTML = "&#9776;";
+        }
     });
 }
 
 toggleMenu();
 
 
-function initProjectModalLogic() {
-    const projectLinks = document.querySelectorAll('.project-link');
+function smoothScroll() {
 
-    projectLinks.forEach((link, index) => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            openProjectModal(index + 1);
+    function smooth(target, duration) {
+        const targetElement = document.querySelector(target);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight; // Altura da barra de navegação
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = this.getAttribute('href');
+                const duration = 1000;
+                smooth(target, duration);
+            });
+        });
+    }
+
+    initSmoothScroll();
+
+}
+smoothScroll()
+
+
+function initProjectModalLogic() {
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectCards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            const modal = document.getElementById(`modal-project-${index + 1}`);
+            if (modal) {
+                modal.style.opacity = '0';
+
+                const video = modal.querySelector('video');
+                if (video) {
+                    video.play();
+                }
+
+                const fadeInModal = () => {
+                    modal.style.display = 'flex';
+                    setTimeout(() => {
+                        modal.style.opacity = '1';
+                    }, 50);
+                };
+
+                fadeInModal();
+
+                const closeButton = modal.querySelector('.modal-close');
+                closeButton.addEventListener('click', () => {
+                    modal.style.opacity = '0';
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                    }, 500);
+                    if (video) {
+                        video.pause();
+                    }
+                });
+            }
         });
     });
-
-    function openProjectModal(projectNumber) {
-        const modal = document.getElementById(`modal-project-${projectNumber}`);
-        if (modal) {
-            modal.style.display = 'block';
-
-            const video = modal.querySelector('video');
-            video.play();
-
-            const closeButton = modal.querySelector('.modal-close');
-            closeButton.addEventListener('click', () => {
-                modal.style.display = 'none';
-                video.pause();
-            });
-        }
-    }
 }
 
 initProjectModalLogic();

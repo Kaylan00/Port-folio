@@ -10,9 +10,27 @@
 @media (min-width: 1024px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        
     }
 }
-
+@media screen and (max-width: 1000px) {
+    .container-modal{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 600px;
+    }
+    .modal h2{
+        margin-top: 30px;
+    }
+    .modal-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        font-size: 50px;
+        color: #fff;
+    }
+}
 @media screen and (max-width: 800px) {
 
     #title-android{
@@ -57,13 +75,25 @@
         color: #fff;
         transition: color 0.3s ease;
     }
-
+    .modal-close {
+        position: absolute;
+        top: 120px;
+        right: 30px;
+        cursor: pointer;
+        font-size: 50px;
+        color: #fff;
+    }
     .menu-icon {
         display: flex;
         cursor: pointer;
         z-index: 10000;
         color: #ff8a00;
         font-size: 2rem;
+    }
+    .buttons-modal{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .close-icon {
@@ -94,6 +124,7 @@
         flex-direction: column-reverse;
         align-items: center;
         gap: 4rem;
+        margin-top: 30px;
     }
     .project-card {
         width: 100%;
