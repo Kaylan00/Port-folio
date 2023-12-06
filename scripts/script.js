@@ -77,7 +77,7 @@
 language();*/
 alert(`Botão de trocar linguagem ainda está em desenvolvimento,
 O video do formulário complexo por enquanto não está funcionando!`)
-// Função para alternar entre temas claro e escuro
+// Função para alternar entre temas claro e escuroo
 
 function toggleTheme() {
     const body = document.body;
